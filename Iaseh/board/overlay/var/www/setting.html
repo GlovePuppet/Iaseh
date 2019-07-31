@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="static/favicon.ico">
+
+    <title>Pandar Console</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/panda.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="index.html"><img src="static/logo.png" alt=""></a></li>
+
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="setting.html">Setting</a></li>
+              <li><a href="information.html">Device Info</a></li>
+              <li><a href="upgrade.html">Upgrade</a></li>
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+    <div class="container-fluid config-table" role="main">
+          <table class="table">
+            <tr>
+              <td colspan="2" class="title">Control IP</td>
+            </tr>
+            <tr>
+              <td>IPv4 Address</td>
+              <td>
+                <input type="text" class="ipOnly form-control" id="ip-address">
+                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>IPv4 Mask</td>
+              <td>
+                <input type="text" class="ipOnly form-control" id="ip-mask">
+                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>IPv4 Gateway</td>
+              <td>
+                <input type="text" class="ipOnly form-control" id="ip-gateway">
+                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id="stream-ip">
+              <td colspan="2" class="title">Stream IP</td>
+            </tr>
+            <tr>
+              <td>IPv4 Address</td>
+              <td>
+                <input type="text" class="ipOnly form-control" id="stream-ip-address">
+                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="title">Settings</td>
+            </tr>
+            <tr>
+              <td>Spin Rate</td>
+              <td>
+                <select name="" class="form-control" id="setting-spin-rate">
+                  <option value="2">600</option>
+                  <option value="3">1200</option>
+                </select>
+                <p>rpm</p>
+              </td>
+            </tr>
+            <tr>
+              <td>Destination Ip</td>
+              <td>
+                <input type="text" class="ipOnly form-control" id="destination-ip">
+                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>Destination Lidar Port</td>
+              <td>
+                <input type="text" class="portOnly form-control" id="destination-lidar-port">
+                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+              </td>
+            </tr>
+            <tr id="gps-row">
+                <td>Destination GPS Port</td>
+                <td>
+                  <input type="text" class="portOnly form-control" id="destination-gps-port">
+                  <span class="glyphicon glyphicon-ok"></span>
+                  <span class="glyphicon glyphicon-remove"></span>
+                </td>
+              </tr>
+            <tr>
+              <td style="padding-right: 0">
+                <p class="align-left">Sync Angle</p><div class="align-right"><input id="sync-angle-checkbox" type="checkbox" onchange="handleSyncAngle()"></div>
+              </td>
+              <td>
+                <input type="number" class="angleOnly form-control" min="0" max="359" id="sync-angle" disabled>
+                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+              </td>
+            </tr>
+            <tr>
+              <td id="start-td">
+                <p class="align-left">Angle Range</p><p class="align-right">Start:</p>  
+              </td>
+              <td>
+                <input type="number" class="startAngleOnly form-control" min="0" max="359" id="start-angle">
+                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+              </td>
+            </tr>
+            <tr>
+              <td id="end-td">
+                  <div>End:</div>
+              </td>
+              <td>
+                <input type="number" class="endAngleOnly form-control" min="1" max="360" id="end-angle">
+                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>Dual Return Type</td>
+              <td>
+                <select class="form-control" id="setting-lidar-mode">
+                  <option value="0">Last Return</option>
+                  <option value="1">Strongest Return</option>
+                  <option value="2">Dual Return</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+
+      <div class="btn-submit" id="save">
+        <button type="button" class="btn btn-primary" onclick="saveSetting()">Save</button>
+      </div>
+
+    </div>
+
+    <footer class="footer navbar-fixed-bottom">
+      <div class="container">
+        <p class="text-muted">Copyright&copy;2013-2017 Hesai Photonics Technology Co.,Ltd  Support: support@hesaitech.com</p>
+      </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/pandar.js"></script>
+  </body>
+</html>

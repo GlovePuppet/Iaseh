@@ -1,0 +1,180 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  margin-bottom: 60px;
+}
+
+.navbar-fixed-top {
+    min-height: 80px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+    font-size: large;
+}
+
+.config-table {
+    padding-top: 200px;
+    width: 50%;
+    font-size: large;
+}
+
+.config-table h2 {
+  text-align: center;
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+
+.config-table table {
+  width: 100%;
+}
+
+.title {
+  text-align: left;
+  font-size: x-large;
+  background-color: #FAF8F8;
+}
+
+td {
+  font-family: 'Times New Roman';
+  text-align: left;
+  width: 50%;
+  height: 50px;
+  vertical-align: middle
+}
+td p {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+#choose-file {
+  cursor: pointer;
+  text-align: center;
+  background: #FAF8F8
+}
+
+.footer {
+
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #000000;
+}
+.container .text-muted {
+  margin: 20px 0;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  text-align: center;
+  width: inherit;
+}
+
+.btn-submit {
+  width: 100px;
+  margin: auto;
+}
+
+select {
+  background: #ffffff;
+  width: inherit;
+  text-align-last: center
+}
+
+.custom-control-description {
+  font-weight:normal;
+}
+
+.glyphicon-remove {
+  display: none;
+}
+.glyphicon-ok {
+  display: none;
+}
+
+#upload-file {
+  visibility: hidden;
+  display: inline-block;
+}
+#upload-firmware{
+  visibility: hidden;
+  display: inline-block;
+}
+
+
+.destroy-page {
+  cursor: pointer;
+  text-align: center;
+  background: #ffff00;
+}
+
+.progress-show {
+  display: none;
+  background: #ffff00;
+}
+
+.align-left {
+  text-align: left;
+  margin-left: 0;
+  width: 100%;
+  display:table-cell
+}
+
+.align-right {
+  text-align: right;
+  margin-right: 0;
+  display:table-cell
+}
+
+#start-td {
+  padding-right: 0
+}
+
+#end-td {
+  text-align: right;
+  padding-right: 0
+}
+
+.table tbody tr td {
+  vertical-align: middle
+}
+
+.progress {
+  margin-bottom: 0
+}
+
+#destroy {
+  position: absolute;
+  top: 100px;
+  right: 10px
+}
+
+.form-control {
+  width: 50%;
+  display: inherit;
+  font-size: 18px
+}
+
+.alert {
+  text-align: center
+}
+
+.center {
+  text-align: center
+}
+
+#laser-mode {
+  font-size: 16px
+}
+
+#laser-intensity {
+  font-size: 16px
+}

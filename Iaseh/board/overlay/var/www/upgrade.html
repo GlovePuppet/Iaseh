@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="static/favicon.ico">
+
+    <title>Pandar Console</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/panda.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="index.html"><img src="static/logo.png" alt=""></a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="setting.html">Setting</a></li>
+              <li><a href="information.html">Device Info</a></li>
+              <li class="active"><a href="upgrade.html">Upgrade</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+    <div class="container-fluid config-table" role="main">
+
+          <table class="table" id="version-table">
+            <tr>
+              <td colspan="2" class="title">Pandar Upgrade Information</td>
+            </tr>
+            <tr>
+              <td>Software Version</td>
+              <td id="s-version"></td>
+            </tr>
+            <tr>
+              <td>Firmware of Sensor Version</td>
+              <td id="fs-version"></td>
+            </tr>
+            <tr>
+              <td>Firmware of Controller Version</td>
+              <td id="fc-version"></td>
+            </tr>
+            <tr>
+              <td colspan="2" id="choose-file" onclick="$('#upload-file').click();">
+                <span class="glyphicon glyphicon-upload"></span>&nbsp;Upload
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+
+        </table>
+
+        <input type="file" id="upload-file" class="input-update">
+
+
+        <!---------->
+        <table class="table" id="progress-table">
+            <tr id="progress-table-title-tr">
+              <td colspan="2" class="title">Pandar Upgrading Progress</td>
+            </tr>
+            <!--<tr>
+              <td>Firmware of Sensor</td>
+              <td>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped active" id="progressbar-fs" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        <span id="aa-fs">0%</span>
+                    </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Firmware of Controller</td>
+              <td>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped active" id="progressbar-fc" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        <span id="aa-fc">0%</span>
+                    </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Software</td>
+              <td>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped active" id="progressbar-s" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        <span id="aa-s">0%</span>
+                    </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>-->
+
+        </table>
+
+    </div>
+
+
+
+    <footer class="footer navbar-fixed-bottom">
+      <div class="container">
+        <p class="text-muted">Copyright&copy;2013-2017 Hesai Photonics Technology Co.,Ltd  Support: support@hesaitech.com</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/pandar.js"></script>
+  </body>
+</html>

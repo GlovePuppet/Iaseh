@@ -1,0 +1,6 @@
+*.docx
+*.pptx
+*.json
+*.lock
+node_modules/*
+test/*
