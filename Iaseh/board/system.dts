@@ -221,7 +221,7 @@
 			u-boot,dm-pre-reloc;
 
 			flash@0 {
-				compatible = "micron,m25p80";
+				compatible = "micron,n25q128a13";
 				reg = <0x0>;
 				#address-cells = <0x1>;
 				#size-cells = <0x1>;
