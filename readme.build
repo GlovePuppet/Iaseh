@@ -1,0 +1,22 @@
+
+Fetch the code
+
+$ git clone https://github.com/GlovePuppet/Iaseh.git
+
+Initialise the BR submodule
+
+$ cd Iaseh
+$ git submodule update --init
+$ cd ..
+
+Configure the project 
+
+$ make BR2_EXTERNAL=$PWD/Iaseh -C buildroot Iaseh_defconfig
+
+Build it
+
+$ make -C buildroot O=$PWD/build
+
+Build artifacts (uImage, system.db etc) are in build/images
+
+
