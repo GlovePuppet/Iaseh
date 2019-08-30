@@ -11,11 +11,11 @@ $ cd ..
 
 Configure the project 
 
-$ make BR2_EXTERNAL=$PWD/Iaseh -C buildroot Iaseh_defconfig
+$ make BR2_EXTERNAL=$PWD/Iaseh O=$PWD/build -C buildroot Iaseh_defconfig
 
 Build it
 
-$ make -C buildroot O=$PWD/build
+$ make BR2_EXTERNAL=$PWD/Iaseh O=$PWD/build -C buildroot
 
 Build artifacts (uImage, system.db etc) are in build/images
 
